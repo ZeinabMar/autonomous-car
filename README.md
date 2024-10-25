@@ -1,15 +1,13 @@
-# Autonomous Car Project
-
-This project consists of multiple subprojects focused on developing systems for autonomous vehicles. The main areas of research include 3D object detection, lane detection, and depth estimation. Each subproject leverages advanced deep learning techniques to enhance the functionality and safety of autonomous cars.
-
 ## Subproject 1: 3D Object Detection
 
 We have implemented a 3D object detection system using the **RTM3** neural network, which has been calibrated on our custom dataset and deployed on the **Jetson Nano** platform. This system utilizes depth estimation information obtained from the **BTS** neural network to enhance 3D detection capabilities. 
 
 ### Implementation Details
 
-1. **RTM3 Network**: The RTM3 neural network has been tailored for real-time 3D object detection.
-2. **Depth Estimation**: The BTS neural network provides depth information, which is crucial for accurately identifying and classifying objects in the environment.
+1. **RTM3 Network**: The RTM3 neural network has been tailored for real-time 3D object detection. The output consists of the 3D coordinates of all detected objects in the image, along with their respective labels, which are saved in the `IMAGE.txt` file.
+
+2. **Depth Estimation**: The BTS neural network, which is described in [41], employs ASPP as an encoder and local planar guidance layers as a decoder to achieve a full spatial resolution depth map. The depth estimation outputs are saved in images with filenames labeled as `Car1*1`, `Car2*2`, etc.
+
 3. **Deployment**: The entire system is deployed on the Jetson Nano, optimizing it for use in autonomous vehicles.
 
 ![3D Detection Result](result_3d_detection.png)
