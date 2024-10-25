@@ -4,9 +4,9 @@ We have implemented a 3D object detection system using the **RTM3** neural netwo
 
 ### Implementation Details
 
-1. **RTM3 Network**: The RTM3 neural network has been tailored for real-time 3D object detection. The output consists of the 3D coordinates of all detected objects in the image, along with their respective labels, which are saved in the `IMAGE.txt` file.
+1. **RTM3 Network**: The RTM3 neural network has been tailored for real-time 3D object detection. The output consists of the 3D coordinates of all detected objects in the image, along with their respective labels, which are saved in the `image.txt` file.
 
-2. **Depth Estimation**: The BTS neural network, which is described in [41], employs ASPP as an encoder and local planar guidance layers as a decoder to achieve a full spatial resolution depth map. The depth estimation outputs are saved in images with filenames labeled as `Car1*1`, `Car2*2`, etc.
+2. **Depth Estimation**: The BTS neural network employs ASPP as an encoder and local planar guidance layers as a decoder to achieve a full spatial resolution depth map. The depth estimation outputs are saved in images with filenames labeled as `Car1*1`, `Car2*2`, etc.
 
 3. **Deployment**: The entire system is deployed on the Jetson Nano, optimizing it for use in autonomous vehicles.
 
